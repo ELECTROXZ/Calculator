@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 320px; /* Adjusted width for better button arrangement */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.display {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    font-size: 2em;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.history {
+    display: none; /* Initially hidden */
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 10px; /* Space between buttons */
+}
+
+.btn {
+    background-color: #f0f0f0; /* Light gray for number buttons */
+    border: none;
+    border-radius: 5px;
+    color: #333; /* Darker text color for better contrast */
+    font-size: 1.5em;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    height: 60px; /* Fixed height for uniformity */
+}
+
+.btn:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Increase shadow effect on hover */
+}
+
+/* Specific styles for Clear and Delete buttons */
+.btn.clear {
+    background-color: red; /* Red background for Clear button */
+    color: white; /* White text for better contrast */
+}
+
+.btn.delete {
+    background-color: red; /* Red background for Delete button */
+    color: white; /* White text for better contrast */
+}
+
+.btn.clear:hover,
+.btn.delete:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+/* Operator buttons */
+.operator {
+    background-color: #ff7f00; /* Darker orange for operator buttons */
+    color: white; /* White text for better contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.operator:hover {
+    background-color: #e06b00; /* Even darker orange on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Increase shadow effect on hover */
+}
+
+.history-icon {
+    background-color: #ffcc00; /* Darker yellow for history icon */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.history-icon:hover {
+    background-color: #e0b800; /* Even darker yellow on hover */
+}
+
+/* Dark Theme Styles */
+body.dark {
+    background-color: #121212; /* Dark background */
+}
+
+.calculator.dark {
+    background-color: #1e1e1e; /* Darker calculator background */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.display.dark {
+    background-color: #333; /* Darker display background */
+    color: white; /* White text for better contrast */
+}
+
+.btn.dark {
+    background-color: #007acc; /* Darker blue for buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.btn.dark:hover {
+    background-color: #005f99; /* Darker blue on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Increase shadow effect on hover */
+}
+
+.operator.dark {
+    background-color: #ff8c00; /* Darker orange for operators */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.operator.dark:hover {
+    background-color: #e07b00; /* Darker orange on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Increase shadow effect on hover */
+}
+
+.history-icon.dark {
+    background-color: #ffdb00; /* Darker yellow for history icon */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.history-icon.dark:hover {
+    background-color: #e0c200; /* Even darker yellow on hover */
+}
